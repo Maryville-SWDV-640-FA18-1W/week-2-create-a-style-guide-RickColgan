@@ -11,42 +11,67 @@
 
     <!-- Site theme -->
     <link rel="stylesheet" type="text/css" href="css/theme.css">
+	<!-- The next line lets me tap into the Google Fonts API and use their free fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 
     <!--  Place Custom Styles Below -->
     <style>
         body {
-            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+            font-family: Hind, sans-serif;
             color: black;
         }
+		
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: 700;
+			font-family: Hind, sans-serif;
+			color: #515769;
+			line-height: 1.4;
+			margin: 0 0 15px;
+		}
 
         h1 {
-            font-size: 24px;
-            font-weight: bold;
+			font-size: 40px;
         }
 
         h2 {
-            font-size: 20px;
+            font-size: 30px;
         }
 
         h3 {
-            font-size: 16px;
+            font-size: 22px;
         }
 
         button {
-            background-color: orange;
-            border-radius: 5px;
-            padding: 10px;
-            color: white;
+			background-color: #17BED2;
+			border-color: transparent;
+			line-height: 1.4;
+			text-align: center;
+			background-image: none;
+			border-style: solid;
+			white-space: nowrap;
+			vertical-align: middle;
+			padding: 15px 30px;
+			color: #FFFFFF;
+			font-weight: 600;
         }
-
+		
         .inputLabel {
             font-size: 14px;
             font-weight: bold;
         }
 
         input.inputField {
-            padding: 5px;
-            border: 1px solid orange;
+			padding: 5px;
+			border: 1px solid #a6a7aa;
+			font-size: 14px;
+			height: 50px;
+			font-weight: 400;
+			color: #a6a7aa;
+			background: #fafafa;
+			border: none;
+			box-shadow: none;
+			border-radius: 0;
+			padding-left: 15px;a6a7aa
         }
 
         div.box {
@@ -57,37 +82,37 @@
         }
 
         #primary1 {
-            background-color: orange;
+			background-color: #A6A7AA;
         }
 
         #primary2 {
-            background-color: red;
+			background-color: #81848f;
         }
 
         #primary3 {
-            background-color: yellow;
+			background-color: #515769;
         }
 
         .warning {
-            background-color: yellow;
+            background-color: #827941;
             font-weight: bold;
-            color: black;
+            color: #bfc1c7;
             padding: 10px;
             border-radius: 5px;
         }
 
         .danger {
-            background-color: red;
+            background-color: #823f3d;
             font-weight: bold;
-            color: white;
+            color: #BFC1C7;
             padding: 10px;
             border-radius: 5px;
         }
 
         .success {
-            background-color: green;
+            background-color: #788578;
             font-weight: bold;
-            color: white;
+            color: #BFC1C7;
             padding: 10px;
             border-radius: 5px;
         }
@@ -103,12 +128,18 @@
         #footer {
             border-top: 1px solid #dddddd;
             margin-top: 50px;
+			margin-bottom: 25px;
             padding: 10px;
             text-align: center;
+			background-color: #515769;
+			color: #CBD3E1;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
     </style>
+	
 	<!-- Include script for font awesome icon library -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	
 </head>
 
 <body>
@@ -163,8 +194,7 @@
                     <h1>
                         <a name="fonts"></a>Font</h1>
                 </div>
-                <p>My application utilizes the "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica,
-                    Arial, "sans-serif" font-family with black text.</p>
+                <p>My application utilizes the Hind, sans-serif font-family with black text.</p>
             </div>
             <div class="spacer">
                 <a href="#Top">Back to Top</a>
@@ -177,7 +207,7 @@
                     <h1>
                         <a name="colorTheme"></a>Color Theme</h1>
                 </div>
-                <p>My application incorporates the below color scheme in its interface.</p>
+                <p>My application incorporates the below color scheme in its interface. A quick review of my personas should prove that a monochromatic color scheme for an older demographic makes the most sense.</p>
                 <div class="box" id="primary1"></div>
                 <div class="box" id="primary2"></div>
                 <div class="box" id="primary3"></div>
@@ -224,6 +254,7 @@
                         <a name="formElements"></a>Form Elements</h1>
                 </div>
                 <p>For the varous forms that the application will contain, it will contain input fields and labels with the below styling:</p>
+				<p>As a side note, part of this design will be its cleanliness (I'm a big fan of white-space too), so no borders on the form. If you look closely enough, you will see that the background color is off-white and I'm hoping that's enough to make this work.</p>
                 <form>
                     <label for="name" class="inputLabel">Name</label>
                     <input type="input" id="name" class="inputField" value="">
@@ -241,6 +272,7 @@
                         <a name="messages"></a>Messages</h1>
                 </div>
                 <p>For various completed tasks, application notifications will be presented to the user based.  The following contextual messages will be used.</p>
+				<p>To find colors that were muted and kept with my monochromatic color scheme was a challenge. Hopefully, there is enough yellow, red, and green in these colors that it's easy to know what's going on. I hope I don't have to use these.</p>
                 <p class="warning">Warning!</p>
                 <p class="danger">Danger!</p>
                 <p class="success">Success!</p>
@@ -252,9 +284,7 @@
         </div>
     </div>
     <div id="footer">
-        <div class="container">
-            <p class="text-muted">Copyright My Style Guide</p>
-        </div>
+            Copyright My Style Guide
     </div>
 </body>
 
